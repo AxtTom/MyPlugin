@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'de.axttom'
+version '1.0-SNAPSHOT'
+jar {
+    destinationDirectory.set(file("C:\\Users\\wolft\\Programming\\java\\testserver\\plugins"))
+}
+
+repositories {
+    mavenCentral()
+    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly("io.papermc.paper:paper-api:1.19-R0.1-SNAPSHOT")
+    implementation files("C:\\Users\\wolft\\Programming\\java\\mongo-java-driver-2.13.1.jar")
+}
+
+test {
+    useJUnitPlatform()
+}

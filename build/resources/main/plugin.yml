@@ -1,0 +1,32 @@
+main: de.axttom.myplugin.MyPlugin
+version: 1.0
+name: MyPlugin
+
+commands:
+  fly:
+    usage: /fly [player]
+    permission: myplugin.fly
+  flyspeed:
+    usage: /flyspeed <speed> [player]
+    permission: myplugin.flyspeed
+  damage:
+    usage: /damage
+    permission: myplugin.damage
+  invsee:
+    usage: /invsee <player>
+    permission: myplugin.invsee
+  vanish:
+    usage: /vanish [msg]
+    permission: myplugin.vanish
+
+permissions:
+  myplugin.fly:
+    default: op
+  myplugin.flyspeed:
+    default: op
+  myplugin.damage:
+    default: true
+  myplugin.invsee:
+    default: false
+  myplugin.vanish:
+    default: op
